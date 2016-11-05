@@ -9,7 +9,7 @@ int main() {
 	tmpArr = (int *) malloc(3 * 3 * sizeof(int));
 	
 	for (int i = 0; i < 3; i++) {
-		myArr[i] = (int *) tmpArr + (3 * i);
+		myArr[i] = tmpArr + (3 * i);
 	}
 
 	myArr[0][0] = 0;
@@ -23,7 +23,7 @@ int main() {
 	myArr[2][2] = 8;
 
 	for (int i = 0; i < 3; i++) {
-		for (int j =0; j < 3; i++) {
+		for (int j =0; j < 3; j++) {
 			printf("%d", myArr[i][j]);
 		}
 		printf("\n");
