@@ -18,11 +18,11 @@ int main()
 	return EXIT_SUCCESS
 }
 
-int *getScores(int amt, char *argScores, int *retScores)
+int *getScores(int size, char *argScores, int *retScores)
 {
-	int retScores[amt];
+	int retScores[size];
 
-	for (unsigned int i = 0; i < amt; i++)
+	for (unsigned int i = 0; i < size; i++)
 	{
 		unsigned int ind = 1;
 		char currChar = argScores[0];
@@ -34,11 +34,12 @@ int *getScores(int amt, char *argScores, int *retScores)
 	}
 }
 
-int maxScore(unsigned int max, int *intScores)
+/* I think also number of test cases will be used here */
+int maxScore(int size, int *intScores)
 {
-	int maxScore = 0; // TODO Should this be unsigned?
+	int maxScore = 0; 
 
-	for (unsigned int i = 0; i < amt; i++)
+	for (unsigned int i = 1; i <= size; i++)
 	{
 		max += intScores[i];
 	}
